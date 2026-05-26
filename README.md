@@ -73,3 +73,7 @@ Dn = data['DataNoisy']
 ![2D local similarity slices](https://github.com/lorens5/SDANet/blob/main/Fig/real2b.png)
 ```
 ```
+# :sunrise_over_mountains: Maintainer
+Chao Fu
+
+For any questions regarding the dataset, `pth` or scripts, please open an issue in this repository.
