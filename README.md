@@ -42,15 +42,8 @@ Current unsupervised denoising methods face a severe trade-off between over-para
 ![SDANet Structure](https://github.com/your-username/SDANet/blob/main/Fig/structure.png)
 
 # :hotsprings: Example
-
-```
-```markdown
-# :hotsprings: Example
-
-## Loading the .mat Data
 - All data is stored in `.mat` format. You can run this script to convert the data from MATLAB to Python.
-
-```python
+```makedown
 import scipy.io as sio
 data = sio.loadmat('your_data.mat')
 Dc = data['DataClean']
