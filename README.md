@@ -25,10 +25,10 @@ Current unsupervised denoising methods face a severe trade-off between over-para
 
 | Name | Data Size | Patch Size | Slid Size | 
 | :--- | :--- | :--- | :--- |
-| seis2dsyn | 512 $\times$ 64 | 32 $\times$ 32 | 1 $\times$ 1 |
+| seis2dsyn | 502 $\times$ 64 | 32 $\times$ 32 | 1 $\times$ 1 |
 | seis3dsyn | 126 $\times$ 32 $\times$ 32 | 12 $\times$ 12 $\times$ 12 | 2 $\times$ 2 $\times$ 2 | 
-| real2d | 512 $\times$ 128 | 32 $\times$ 32 | 1 $\times$ 1 | 
-| real3d | 256 $\times$ 64 $\times$ 48 | 12 $\times$ 12 $\times$ 12 | 2 $\times$ 2 $\times$ 2 | 
+| real2d | 512 $\times$ 123 | 48 $\times$ 48 | 1 $\times$ 1 | 
+| real3d | 256 $\times$ 64 $\times$ 48 | 12 $\times$ 12 $\times$ 12 | 4 $\times$ 2 $\times$ 2 | 
 
 # :rocket: File Description
 
