@@ -43,10 +43,40 @@ Current unsupervised denoising methods face a severe trade-off between over-para
 
 # :hotsprings: Example
 
-## Loading the .mat Data 
-All data is stored in `.mat` format. You can run this script to convert the format from `MATLAB` -> `Python`.
+```
+```markdown
+# :hotsprings: Example
+
+## Loading the .mat Data
+- All data is stored in `.mat` format. You can run this script to convert the data from MATLAB to Python.
+
 ```python
 import scipy.io as sio
-data = sio.loadmat('real3d.mat')
+data = sio.loadmat('your_data.mat')
 Dc = data['DataClean']
 Dn = data['DataNoisy']
+```
+
+## Taking synthetic 2D seismic data as an example
+- The figure below compares the denoising results of DDIUL, PatchUNet, WMANet, and the proposed SDANet on a synthetic dataset with five linear events contaminated by random and erratic noise (initial SNR = -4.27 dB). SDANet achieves the highest SNR (14.10 dB) and preserves the continuity of seismic events with the cleanest background.
+
+![Denoising comparison on synthetic 2D data](https://github.com/your-username/your-repo/blob/main/Fig/syn1b.png)
+
+- The f-k spectra further illustrate the energy concentration. SDANet shows the most compact energy distribution around the valid signals, closely matching the spectrum of the clean data, while other methods exhibit scattered background energy or spectral smearing.
+
+![f-k spectra of denoised results](https://github.com/your-username/your-repo/blob/main/Fig/syn1b2.png)
+
+## Taking 3D field data as an example
+- We test the methods on a 3D field dataset (Kerry, New Zealand). The figure below shows the denoised volumes and removed noise volumes of DDIUL, PatchUNet, WMANet, and SDANet. WMANet over-smoothes the horizons and leaks coherent reflections into the removed noise, while SDANet reduces complex field noise effectively without damaging valid structures.
+
+![3D denoising results on field data](https://github.com/your-username/your-repo/blob/main/Fig/real2a.png)
+
+- 3D local similarity cubes confirm the signal preservation. DDIUL, PatchUNet, and WMANet display many high‑similarity regions (yellow/red), indicating wrongly removed or leaked reflections. SDANet shows a predominantly deep‑blue background, proving minimal signal leakage.
+
+![3D local similarity cubes](https://github.com/your-username/your-repo/blob/main/Fig/real2a1.png)
+
+- A 2D slice extracted from the similarity cube along the inline direction highlights the advantage of SDANet. While the other methods exhibit obvious high‑similarity anomalies, SDANet retains a uniformly low similarity, demonstrating robust signal preservation.
+
+![2D local similarity slices](https://github.com/your-username/your-repo/blob/main/Fig/real2b.png)
+```
+```
